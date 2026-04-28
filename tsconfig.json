@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "NodeNext",
+    "target": "es2022",
+    "module": "node16",
     "strict": false,
     "noImplicitAny": true,
     "forceConsistentCasingInFileNames": true
