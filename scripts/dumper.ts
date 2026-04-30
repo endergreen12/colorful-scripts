@@ -1,9 +1,10 @@
 import "frida-il2cpp-bridge"
 import path from "path";
+import { getAssemblyImage } from "../lib/utils";
 
 Il2Cpp.perform(() => {
     const DUMP_DIR_PATH = path.join(Il2Cpp.application.dataPath, "dumped")
-    const assemblyImage = Il2Cpp.domain.assembly("Assembly-CSharp").image
+    const assemblyImage = getAssemblyImage()
     const masterDataManager = assemblyImage.class("Sekai.MasterDataManager").method<Il2Cpp.Object>("get_Instance").invoke()
 
     console.log()
